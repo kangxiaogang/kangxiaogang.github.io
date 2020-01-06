@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Louis Kang</title>
-    <link>louis.dekra.ltd/</link>
+    <link>https://louis.dekra.ltd/</link>
     <description>Recent content on Louis Kang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 05 Jan 2020 20:17:07 +0800</lastBuildDate>
     
-	<atom:link href="louis.dekra.ltd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://louis.dekra.ltd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>louis.dekra.ltd/about/about/</link>
+      <link>https://louis.dekra.ltd/about/about/</link>
       <pubDate>Sun, 05 Jan 2020 20:17:07 +0800</pubDate>
       
-      <guid>louis.dekra.ltd/about/about/</guid>
+      <guid>https://louis.dekra.ltd/about/about/</guid>
       <description>Test</description>
     </item>
     
     <item>
       <title>装完Ubuntu 18.04之后要做的几件事</title>
-      <link>louis.dekra.ltd/linux/%E8%A3%85%E5%AE%8C-ubuntu-18.04-%E4%B9%8B%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E4%BA%8B/</link>
+      <link>https://louis.dekra.ltd/linux/%E8%A3%85%E5%AE%8C-ubuntu-18.04-%E4%B9%8B%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E4%BA%8B/</link>
       <pubDate>Sun, 05 Jan 2020 20:13:57 +0800</pubDate>
       
-      <guid>louis.dekra.ltd/linux/%E8%A3%85%E5%AE%8C-ubuntu-18.04-%E4%B9%8B%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E4%BA%8B/</guid>
+      <guid>https://louis.dekra.ltd/linux/%E8%A3%85%E5%AE%8C-ubuntu-18.04-%E4%B9%8B%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E4%BA%8B/</guid>
       <description>装完 Ubuntu 18.04之后要做的几件事 1. 更换 apt 源 Ubuntu 系统自带的源速度不够快，因此需要更换为国内的镜像源，我用的比较多的是清华的镜像源，链接为mirr</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>louis.dekra.ltd/essay/hello-world/</link>
+      <link>https://louis.dekra.ltd/essay/hello-world/</link>
       <pubDate>Sat, 14 Dec 2019 23:31:57 +0800</pubDate>
       
-      <guid>louis.dekra.ltd/essay/hello-world/</guid>
+      <guid>https://louis.dekra.ltd/essay/hello-world/</guid>
       <description>Hello, world!</description>
     </item>
     
