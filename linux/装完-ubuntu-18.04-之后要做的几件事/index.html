@@ -15,14 +15,14 @@
     <div class="spacer"></div>
     <div class="main-menu">
       <a class="menu-item" href="https://louis.dekra.ltd/" title="Louis Kang's blog">首页</a>
-      <a class="menu-item" href="https://louis.dekra.ltdessay/" title="随笔">随笔</a>
-      <a class="menu-item" href="https://louis.dekra.ltdmanagement/" title="管理">管理</a>
-      <a class="menu-item" href="https://louis.dekra.ltdcoding/" title="编程">编程</a>
-      <a class="menu-item" href="https://louis.dekra.ltdsafety/" title="安规">安规</a>
-      <a class="menu-item" href="https://louis.dekra.ltdemc/" title="电磁兼容">电磁兼容</a>
-      <a class="menu-item" href="https://louis.dekra.ltdlinux/" title="Linux">Linux</a>
-      <a class="menu-item" href="https://louis.dekra.ltdpresentation/" title="课件">课件</a>
-      <a class="menu-item" href="https://louis.dekra.ltdabout/" title="关于">关于</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/essay/" title="随笔">随笔</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/management/" title="管理">管理</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/coding/" title="编程">编程</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/safety/" title="安规">安规</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/emc/" title="电磁兼容">电磁兼容</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/linux/" title="Linux">Linux</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/presentation/" title="课件">课件</a>
+      <a class="menu-item" href="https://louis.dekra.ltd/about/" title="关于">关于</a>
     </div>
   </nav>
 	<div class="title-panel">
@@ -80,16 +80,12 @@ Linux 作为服务器上使用最多的操作系统，对开机自启动和定�
 	
 </div>
 <footer class="site-footer">
-  <script src="http://chingli.com/js/headroom.js"></script>
+  <script src="https://louis.dekra.ltd/js/headroom.js"></script>
   <script>
     (function() {
       var mainNavbar = document.querySelector("#main-navbar")
       var headroom = new Headroom(mainNavbar);
       headroom.init();
-      var menuItems = mainNavbar.querySelector(".main-menu").querySelectorAll(".menu-item")
-      for(var i = 0; i < menuItems.length; i++) {
-        menuItems[i].addEventListener("click", function(e) {
-          e.target.classList.add("active")
         })
       }
     })();
