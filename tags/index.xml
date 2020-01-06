@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Louis Kang</title>
+    <link>louis.dekra.ltd/tags/</link>
+    <description>Recent content in Tags on Louis Kang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 05 Jan 2020 20:17:07 +0800</lastBuildDate>
+    
+	<atom:link href="louis.dekra.ltd/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>随笔</title>
+      <link>louis.dekra.ltd/tags/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Sun, 05 Jan 2020 20:17:07 +0800</pubDate>
+      
+      <guid>louis.dekra.ltd/tags/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>louis.dekra.ltd/tags/linux/</link>
+      <pubDate>Sun, 05 Jan 2020 20:13:57 +0800</pubDate>
+      
+      <guid>louis.dekra.ltd/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>louis.dekra.ltd/tags/ubuntu/</link>
+      <pubDate>Sun, 05 Jan 2020 20:13:57 +0800</pubDate>
+      
+      <guid>louis.dekra.ltd/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

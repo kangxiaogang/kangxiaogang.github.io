@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>装完Ubuntu 18.04之后要做的几件事</title>
+	<link href="" rel="alternate" type="application/rss+xml" title="Louis Kang" />
+	<base href="louis.dekra.ltd">
+	<link href="louis.dekra.ltdcss/style.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <nav class="navbar" id="main-navbar">
+    <div class="spacer"></div>
+    <div class="main-menu">
+      <a class="menu-item" href="louis.dekra.ltd/" title="Louis Kang's blog">首页</a>
+      <a class="menu-item" href="louis.dekra.ltdessay/" title="随笔">随笔</a>
+      <a class="menu-item" href="louis.dekra.ltdmanagement/" title="管理">管理</a>
+      <a class="menu-item" href="louis.dekra.ltdcoding/" title="编程">编程</a>
+      <a class="menu-item" href="louis.dekra.ltdsafety/" title="安规">安规</a>
+      <a class="menu-item" href="louis.dekra.ltdemc/" title="电磁兼容">电磁兼容</a>
+      <a class="menu-item" href="louis.dekra.ltdlinux/" title="Linux">Linux</a>
+      <a class="menu-item" href="louis.dekra.ltdpresentation/" title="课件">课件</a>
+      <a class="menu-item" href="louis.dekra.ltdabout/" title="关于">关于</a>
+    </div>
+  </nav>
+	<div class="title-panel">
+		<h1 class="title"><a class="menu-item" href="louis.dekra.ltd">Louis Kang</a></h1>
+		<p class="subtitle">管理 · 检测认证 · 编程 · Linux</p>
+	</div>
+</header>
+
+<div class="main-content container">
+	<div class="post">
+		<h1 class="post-title">装完Ubuntu 18.04之后要做的几件事</h1>
+		<div class="post-meta">
+			<p>2020年1月5日&nbsp;//&nbsp;<a href="tags/linux">Linux</a>,&nbsp;<a href="tags/ubuntu">Ubuntu</a></p>
+		</div>
+		<h2 id="-ubuntu-1804">装完 Ubuntu 18.04之后要做的几件事</h2>
+<h3 id="1--apt-">1. 更换 apt 源</h3>
+<p>Ubuntu 系统自带的源速度不够快，因此需要更换为国内的镜像源，我用的比较多的是清华的镜像源，链接为<a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">mirrors.tuna.tsinghua.edu.cn/help/ubuntu</a></p>
+<p>常用的 apt 源还有 163，ustc 等，可自行百度之
+先将系统自带的源备份：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+</code></pre></div><p>然后打开源文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo vim /etc/apt/sources.list
+</code></pre></div><p>全选并把原来的文字全部删除，再将清华镜像源文字拷贝到 /etc/apt/sources.list 中并保存
+新立得软件在菜单中叫 &ldquo;软件&rdquo;，英文叫 &ldquo;Software &amp; Update&rdquo;，点开后把 Ubuntu Software 那一栏的选择全部取消，在 Other Software 中添加清华的镜像源
+替换了源之后可以用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+</code></pre></div><p>更新一下源，sudo apt update 和 sudo apt upgrade 容易混淆，后者是用来更新所有软件的
+以上操作也可以用 Ubuntu 的新立得软件实现</p>
+<h3 id="2--sudo-">2. 去除 sudo 密码</h3>
+<p>Ubuntu 有很多需要 sudoer 操作的命令，每次执行命令都需要输入密码，初衷是出于安全的考虑，但这个安全特性对个人使用的电脑就没那么重要了，因此可以选择去除 sudo 密码，去除的方法如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo
+</code></pre></div><p>进入文件之后把</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">%sudo	ALL<span style="color:#f92672">=</span><span style="color:#f92672">(</span>ALL:ALL<span style="color:#f92672">)</span> ALL
+</code></pre></div><p>改成</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">%sudo	ALL<span style="color:#f92672">=</span><span style="color:#f92672">(</span>ALL:ALL<span style="color:#f92672">)</span> NOPASSWD:ALL
+</code></pre></div><p>visudo 命令默认是使用 nano 编辑器的</p>
+<h3 id="3--gnometweaktools">3. 安装 gnome-tweak-tools</h3>
+<p>gnome-tweak-tools 主要用于 gnome3 的一些高级设置，特别是用于 Ubuntu 外观美化
+在终端输入命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install gnome-tweak-tools
+</code></pre></div><p>安装 gnome-tweak-tools 后可到 <a href="https://www.gnome-look.org/">gnome-look.org</a> 下载主题用于美化界面，注意只有 GTK3 主题是适用于 gnome3的，我目前使用的是 McMojave 这个主题，是仿 MacOS 的，美观度还不错。将主题下载下来后，解压放到 ~/.themes 中（如果没有 ~/.themes 这个文件夹，就自己新建一个），在菜单中找到 Tweaks，在外观中设置应用程序为 McMojave 主题。可以顺手把壁纸也替换一下，颜值会有巨大改观 :)</p>
+<h3 id="4-">4. 增加一些开机启动程序</h3>
+<p>有些程序需要开机自启动，在 Tweaks 和 Startup Applications Preferences 中都可以增加开机启动程序，目前我用了一个类似于 WIndows 上 Listary 功能的 lancher app Utools
+Linux 作为服务器上使用最多的操作系统，对开机自启动和定时任务这些基本任务的操作方法由来已久，一般是通过命令行进行操作，定时任务使用 crontab，开机自启动管理新的发行版都已切换到 systemd 的 service 管理，可参考 <a href="https://wiki.archlinux.org/">archwiki</a> init 词条，这里不再赘述</p>
+<h3 id="5-">5. 安装一些必要的软件</h3>
+<h4 id="1">1）安装中文输入法小狼毫</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ibus-rime
+</code></pre></div><p>在设置的区域和语言中添加一个输入法，选择 &ldquo;汉语 (rime)&quot;，小狼毫输入法就出现了。同时根据 windows 的习惯在 &ldquo;设置-&gt;设备-&gt;键盘&rdquo; 中把切换到下一个输入法的快捷键从 super + 空格改为 ctrl + 空格</p>
+
+	</div>
+	<ul class="pager">
+		 &nbsp;<li class="previous"><a href="louis.dekra.ltd/essay/hello-world/">«Hello World</a></li>
+		 &nbsp;<li class="next"><a href="louis.dekra.ltd/about/about/">About»</a></li>
+	</ul>
+	
+</div>
+<footer class="site-footer">
+  <script src="http://chingli.com/js/headroom.js"></script>
+  <script>
+    (function() {
+      var mainNavbar = document.querySelector("#main-navbar")
+      var headroom = new Headroom(mainNavbar);
+      headroom.init();
+      var menuItems = mainNavbar.querySelector(".main-menu").querySelectorAll(".menu-item")
+      for(var i = 0; i < menuItems.length; i++) {
+        menuItems[i].addEventListener("click", function(e) {
+          e.target.classList.add("active")
+        })
+      }
+    })();
+  </script>
+	<div class="container">
+		<p>使用 <a href="https://gohugo.io/">Hugo</a> 并基于 <a href="https://github.com/chingli/rockrock">RockRock</a> 主题构建.&nbsp;
+		</span></p>
+		<p class="text-muted small">Copyright &copy; 2020 by Louis Kang</p>
+	</div>
+</footer>
+</body>
+</html>
+

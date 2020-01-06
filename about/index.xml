@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Louis Kang</title>
+    <link>louis.dekra.ltd/about/</link>
+    <description>Recent content in Abouts on Louis Kang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 05 Jan 2020 20:17:07 +0800</lastBuildDate>
+    
+	<atom:link href="louis.dekra.ltd/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>louis.dekra.ltd/about/about/</link>
+      <pubDate>Sun, 05 Jan 2020 20:17:07 +0800</pubDate>
+      
+      <guid>louis.dekra.ltd/about/about/</guid>
+      <description>Test</description>
+    </item>
+    
+  </channel>
+</rss>
